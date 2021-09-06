@@ -1,0 +1,93 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: string
+        name: feature_image
+        label: Feature Image
+      - type: markdown
+        name: feature_text
+        label: Feature Text
+      - type: string
+        name: excerpt
+        label: Excerpt
+      - type: string
+        name: image
+        label: Image
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - 404.md
+      - offline.md
+      - thanks.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: excerpt
+        label: Excerpt
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: boolean
+        name: indexing
+        label: Indexing
+      - type: boolean
+        name: sitemap
+        label: Sitemap
+  page_2:
+    type: page
+    label: Page 2
+    match:
+      - categories.md
+      - elements.md
+      - index.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: excerpt
+        label: Excerpt
+      - type: boolean
+        name: aside
+        label: Aside
+      - type: markdown
+        name: feature_text
+        label: Feature Text
+      - type: string
+        name: feature_image
+        label: Feature Image
+  page_3:
+    type: page
+    label: Page 3
+    match:
+      - search.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: excerpt
+        label: Excerpt
